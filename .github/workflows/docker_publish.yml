@@ -29,7 +29,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ryu1845/${{ github.event.repository.name }},ghcr.io/${{ github.repository }}
+          images: cjmaxik/${{ github.event.repository.name }},ghcr.io/${{ github.repository }}
           flavor: |
             latest=${{ github.ref == 'refs/heads/main' }}
             prefix=
