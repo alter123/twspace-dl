@@ -13,7 +13,7 @@ from requests.exceptions import (ConnectionError, HTTPError, JSONDecodeError,
 from .cookies import validate_cookies
 
 """Twitter unofficial API authorization header."""
-TWITTER_AUTHORIZATION = "Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
+TWITTER_AUTHORIZATION = "Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
 
 """Retry parameters for making all requests."""
 RETRY = Retry(
