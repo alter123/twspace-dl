@@ -7,7 +7,8 @@ from typing import Any, NoReturn
 
 import requests
 from requests.adapters import HTTPAdapter, Retry
-from requests.exceptions import ConnectionError, HTTPError, JSONDecodeError, RetryError
+from requests.exceptions import (ConnectionError, HTTPError, JSONDecodeError,
+                                 RetryError)
 
 from .cookies import validate_cookies
 
