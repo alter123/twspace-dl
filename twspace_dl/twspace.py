@@ -34,7 +34,7 @@ class Twspace(dict):
             root = defaultdict(str, metadata["data"]["audioSpace"]["metadata"])
             if creator_info := root["creator_results"]["result"]:  # type: ignore
                 self["creator_name"] = creator_info["core"]["name"]  # type: ignore
-                self["creator_name"] = creator_info["core"]["screen_name"]  # type: ignore
+                self["creator_screen_name"] = creator_info["core"]["screen_name"]  # type: ignore
                 self["creator_profile_image_url"] = creator_info["avatar"]["image_url"]  # type: ignore
                 self["creator_id"] = API.graphql_api.user_id(
                     creator_info["core"]["screen_name"]  # type: ignore
