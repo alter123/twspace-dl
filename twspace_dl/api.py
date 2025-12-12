@@ -262,6 +262,9 @@ class GraphQLAPI(APIClient):
         - https://x.com/<screen_name>
         - http://x.com/<screen_name>
         - x.com/<screen_name>
+        - https://twitter.com/<screen_name>
+        - http://twitter.com/<screen_name>
+        - twitter.com/<screen_name>
         and with any number of trailing slashes (`/`).
 
         - user_url: The URL pointing to the profile of the Twitter user.
@@ -271,7 +274,7 @@ class GraphQLAPI(APIClient):
         - raise RuntimeError: If the specified URL is not a valid Twitter user profile URL.
         """
         if match := re.match(
-            r"^(?:https?:\/\/|)x\.com\/(?P<screen_name>\w+)$", user_url.strip("/")
+            r"^(?:https?:\/\/|)(?:x|twitter)\.com\/(?P<screen_name>\w+)$", user_url.strip("/")
         ):
             return self.user_id(match.group("screen_name"))
         raise RuntimeError(f"Invalid Twitter user URL: {user_url}")
